@@ -160,15 +160,24 @@
   }
   .hero-headline {
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: clamp(34px, 4vw, 56px);
+    font-size: clamp(44px, 5.8vw, 84px);
     font-weight: 700;
-    line-height: 1.45;
+    line-height: 1.22;
     color: var(--primary);
-    margin-bottom: 24px;
+    margin-bottom: 28px;
     letter-spacing: 0.02em;
   }
   .hero-headline .accent-line {
     color: var(--accent);
+  }
+  .hero-support {
+    font-size: clamp(28px, 2.6vw, 36px);
+    line-height: 1.55;
+    color: var(--accent);
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    margin: 0 0 34px;
+    max-width: 560px;
   }
   .hero-sub {
     font-size: 18px;
@@ -1172,6 +1181,58 @@
     letter-spacing: 0.06em;
   }
   .mobile-menu a:last-child { border-bottom: none; }
+
+  /* ── REFINEMENTS ── */
+  .process-text {
+    max-width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+  }
+
+  .contact-left {
+    max-width: 520px;
+  }
+
+  .contact-desc {
+    max-width: 420px;
+  }
+
+  .footer-simple {
+    text-align: center;
+    color: rgba(255,255,255,0.48);
+    font-size: 13px;
+    letter-spacing: 0.12em;
+  }
+
+  @media (max-width: 640px) {
+    .hero-headline {
+      font-size: clamp(42px, 12vw, 58px);
+      line-height: 1.28;
+      letter-spacing: 0;
+    }
+
+    .hero-support {
+      font-size: clamp(24px, 7vw, 32px);
+      line-height: 1.55;
+      margin-bottom: 34px;
+    }
+
+    .hero-sub {
+      max-width: 100%;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .process-text,
+    .why-text,
+    .service-desc,
+    .plan-desc,
+    .faq-a {
+      line-height: 1.8;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -1213,10 +1274,12 @@
     </div>
     <h1 class="hero-headline reveal reveal-delay-1">
       讓品牌需要設計時，<br>
-      永遠有人支援。<br>
-      <span class="accent-line">穩定的設計支援，<br>
-      讓品牌持續成長。</span>
+      永遠有人支援。
     </h1>
+    <p class="hero-support reveal reveal-delay-1">
+      穩定的設計支援，<br>
+      讓品牌持續成長。
+    </p>
     <p class="hero-sub reveal reveal-delay-2">
       從社群內容、行銷活動到品牌視覺維護，<br>
       提供長期且穩定的設計支援，<br>
@@ -1441,22 +1504,22 @@
     <div class="process-step reveal">
       <div class="process-dot"><span>01</span></div>
       <h3 class="process-title">提出需求</h3>
-      <p class="process-text">透過表單或訊息提出設計需求，說明目的、風格與時程要求。</p>
+      <p class="process-text">分享需求、品牌資訊與時程規劃。</p>
     </div>
     <div class="process-step reveal reveal-delay-1">
       <div class="process-dot"><span>02</span></div>
       <h3 class="process-title">確認方向</h3>
-      <p class="process-text">我們與您確認設計方向、參考素材，確保理解一致後再開始執行。</p>
+      <p class="process-text">確認目標、內容與視覺方向。</p>
     </div>
     <div class="process-step reveal reveal-delay-2">
       <div class="process-dot"><span>03</span></div>
-      <h3 class="process-title">設計與修改</h3>
-      <p class="process-text">設計師執行設計，並依據回饋進行修改，直到您滿意為止。</p>
+      <h3 class="process-title">設計執行</h3>
+      <p class="process-text">開始製作並逐步完成需求。</p>
     </div>
     <div class="process-step reveal reveal-delay-3">
       <div class="process-dot"><span>04</span></div>
-      <h3 class="process-title">交付檔案</h3>
-      <p class="process-text">完成後提供所有格式的設計檔案，可直接使用於各種應用場景。</p>
+      <h3 class="process-title">交付使用</h3>
+      <p class="process-text">取得可直接使用的設計檔案。</p>
     </div>
   </div>
 </section>
@@ -1496,7 +1559,6 @@
         <li>社群內容設計</li>
         <li>行銷活動素材</li>
         <li>優先處理與回應</li>
-        <li>每月設計成果報告</li>
       </ul>
       <a href="#contact" class="plan-btn">立即諮詢</a>
     </div>
@@ -1582,24 +1644,6 @@
         留下您的需求與聯絡方式，<br>
         我們將於 1 個工作天內與您聯繫。
       </p>
-      <div class="contact-info-item">
-        <div class="contact-info-icon">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <span>hello@flowdesign.tw</span>
-      </div>
-      <div class="contact-info-item">
-        <div class="contact-info-icon">
-          <svg viewBox="0 0 24 24"><path d="M21 2H3v16h5l3 3 3-3h7V2z"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="12" y2="13"/></svg>
-        </div>
-        <span>LINE ID: @flowdesign</span>
-      </div>
-      <div class="contact-info-item">
-        <div class="contact-info-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </div>
-        <span>@flowdesign.tw</span>
-      </div>
     </div>
     <div class="reveal reveal-delay-1">
       <div class="contact-form">
@@ -1655,29 +1699,8 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <img src="LOGO_PLACEHOLDER" alt="Flow Design" />
-        <p class="footer-tagline">把設計需求，<br>變成穩定的工作流程。</p>
-        <p style="font-size:12px;color:rgba(255,255,255,0.25);margin-top:20px;font-style:italic;font-family:'Cormorant Garamond',serif;">Design in Flow, Grow in Flow.</p>
-      </div>
-      <div>
-        <p style="font-size:10px;letter-spacing:0.2em;color:rgba(255,255,255,0.25);text-transform:uppercase;margin-bottom:24px;">Navigation</p>
-        <div class="footer-links">
-          <a href="#services">服務項目</a>
-          <a href="#works">作品案例</a>
-          <a href="#plans">合作方式</a>
-          <a href="#process">合作流程</a>
-          <a href="#faq">常見問題</a>
-          <a href="#contact">聯絡我們</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2025 Flow Design. All rights reserved.</span>
-      <span class="footer-accent">Design in Flow, Grow in Flow.</span>
-    </div>
+  <div class="footer-inner footer-simple">
+    <span>© 2026 Flow Design</span>
   </div>
 </footer>
 
